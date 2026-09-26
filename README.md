@@ -1,2 +1,2 @@
 # Infocycle
-Website para e-commerce de dispositivos recestificados.
+Website para e-commerce de dispositivos recertificados.
