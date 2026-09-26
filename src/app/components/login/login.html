@@ -1,0 +1,9 @@
+<div class="mb-3">
+  <label for="email" class="form-label">E-mail</label>
+  <input type="email" name="email" id="email" class="form-control" [ngModel]="email()" (ngModelChange)="email.set($event)" placeholder="seu@email.com" required>
+</div>
+
+<div class="mb-3">
+  <label for="txtSenha" class="form-label">Senha</label>
+  <input type="password" name="senha" id="txtSenha" class="form-control" [ngModel]="senha()" (ngModelChange)="senha.set($event)" placeholder="********" required>
+</div>

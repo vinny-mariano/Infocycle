@@ -1,0 +1,36 @@
+<div class="container my-4">
+  <!-- 🧭 Topo com Logotipo e Botões de Login/Cadastro alinhados à direita -->
+  <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+    <h1 class="h3 text-success fw-bold m-0">♻️ Infocycle</h1>
+    <div class="d-flex gap-2">
+      <a routerLink="/login" class="btn btn-outline-primary btn-sm">Login</a>
+      <a routerLink="/cadastro" class="btn btn-primary btn-sm">Cadastre-se</a>
+    </div>
+  </header>
+
+  <!-- ⚡ Hero Banner de Apresentação -->
+  <section class="p-5 mb-5 bg-light rounded-3 shadow-sm text-center">
+    <h2 class="display-6 fw-bold text-dark">Tecnologia Recertificada com Garantia</h2>
+    <p class="text-muted fs-5">Alta performance e sustentabilidade para o seu setup e para o planeta.</p>
+    <a routerLink="/vitrine" class="btn btn-success btn-lg mt-2">Acessar Vitrine</a>
+  </section>
+
+  <!-- 🏷️ Seção de Principais Promoções e Ofertas -->
+  <section class="mb-5">
+    <h3 class="mb-4 text-primary">🔥 Principais Ofertas</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      @for (promo of promocoes; track promo.titulo) {
+        <div class="col">
+          <div class="card h-100 shadow-sm border-success">
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-danger align-self-start mb-2">{{ promo.desconto }}</span>
+              <h5 class="card-title">{{ promo.titulo }}</h5>
+              <p class="text-success fw-bold fs-5 mt-2">{{ promo.preco }}</p>
+              <a [routerLink]="promo.link" class="btn btn-outline-success mt-auto">Ver Detalhes</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+</div>

@@ -1,0 +1,38 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-primary">🖥️ Monitores Recertificados</h2>
+  <p class="text-muted">Monitores testados, higienizados e com garantia para o seu setup corporativo ou pessoal.</p>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @for (monitor of listaMonitores; track monitor.codigo) {
+      <div class="col">
+        <div class="card h-100 shadow-sm border-success">
+          <div class="card-body d-flex flex-column">
+            @if (monitor.valorPromo) {
+              <span class="badge bg-danger align-self-start mb-2">Oferta Sustentável</span>
+            }
+            <h5 class="card-title">{{ monitor.nome }}</h5>
+            <p class="card-text text-muted small flex-grow-1">{{ monitor.descritivo }}</p>
+            
+            <div class="mb-3">
+              @if (monitor.valorPromo) {
+                <span class="text-muted text-decoration-through small d-block">{{ monitor.valor | currency:'BRL' }}</span>
+                <span class="text-success fw-bold fs-4">{{ monitor.valorPromo | currency:'BRL' }}</span>
+              } @else {
+                <span class="text-success fw-bold fs-4">{{ monitor.valor | currency:'BRL' }}</span>
+              }
+            </div>
+
+            <!-- Botão conectado ao método de adição -->
+            <button class="btn btn-success mt-auto w-100" (click)="adicionarProduto(monitor)">
+              🛒 Adicionar à Cesta
+            </button>
+          </div>
+        </div>
+      </div>
+    } @empty {
+      <div class="col-12 text-center text-muted py-5">
+        Nenhum monitor disponível no momento.
+      </div>
+    }
+  </div>
+</div>

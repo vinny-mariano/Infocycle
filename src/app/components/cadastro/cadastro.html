@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h3>Cadastro de Novo Usuário</h3>
+  <div class="alert alert-success mt-3" role="alert">Preencha os dados para criar sua conta no Infocycle</div>
+  
+  <form class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="txtNome" class="form-label">Nome:</label>
+      <input type="text" id="txtNome" class="form-control" required placeholder="Seu nome completo">
+      <div class="invalid-feedback">O nome é obrigatório.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="txtSobrenome" class="form-label">Sobrenome:</label>
+      <input type="text" id="txtSobrenome" class="form-control" required placeholder="Seu sobrenome">
+      <div class="invalid-feedback">O sobrenome é obrigatório.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="comment" class="form-label">Endereço:</label>
+      <textarea class="form-control" rows="3" id="comment" name="text" required placeholder="Rua, número, bairro, cidade - UF"></textarea>
+      <div class="invalid-feedback">O endereço é obrigatório.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="txtEmailCadastro" class="form-label">E-mail:</label>
+      <input type="email" id="txtEmailCadastro" class="form-control" required placeholder="seu@email.com">
+      <div class="invalid-feedback">Um e-mail válido é obrigatório.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="txtPassword" class="form-label">Senha:</label>
+      <input type="password" id="txtPassword" class="form-control" required placeholder="Mínimo de 6 caracteres">
+      <div class="invalid-feedback">A senha é obrigatória.</div>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+  </form>
+</div>

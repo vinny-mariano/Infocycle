@@ -1,0 +1,41 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-primary">🛒 Sua Cesta - Infocycle</h2>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table align-middle table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>Produto</th>
+              <th>Preço Unitário</th>
+              <th>Quantidade</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Consome o signal diretamente do serviço injetado -->
+            @for (item of cestaService.itens(); track item.produto.codigo) {
+              <tr>
+                <!--<td><img src="{{item.codigo}}.jpg" class="w-25"></td>-->
+                <td>{{ item.produto.nome }}</td>
+                <td>{{ item.produto.valor | currency:'BRL' }}</td>
+                <td><span class="badge bg-secondary">{{ item.quantidade }}</span></td>
+                <td>{{ (item.produto.valor * item.quantidade) | currency:'BRL' }}</td>
+              </tr>
+            } @empty {
+              <tr>
+                <td colspan="4" class="text-center text-muted py-4">Sua cesta está vazia.</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <h4>Total: <span class="text-success">{{ cestaService.totalGeral() | currency:'BRL' }}</span></h4>
+        <button class="btn btn-success btn-lg">Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
