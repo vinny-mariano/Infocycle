@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Produto } from '../../model/produto';
-import { CestaService } from '../../Services/Cesta/cesta.service';
+import { CestaService } from '../../services/cesta/cesta.service';
 
 @Component({
   selector: 'app-monitores',
@@ -11,10 +11,10 @@ import { CestaService } from '../../Services/Cesta/cesta.service';
   styleUrl: './monitores.css',
 })
 export class Monitores {
-  // 💉 Injeção de dependência do serviço centralizado de estado
+  //  Injeção de dependência do serviço centralizado de estado
   private cestaService = inject(CestaService);
 
-  // 📦 Catálogo especializado de monitores recertificados
+  //  Catálogo especializado de monitores recertificados
   listaMonitores: Produto[] = [
     {
       codigo: 101,
@@ -24,7 +24,8 @@ export class Monitores {
       valorPromo: 549.90,
       quantidade: 12,
       destaque: 1,
-      keywords: 'monitor, dell, ips, fullhd, recertificado'
+      keywords: 'monitor, dell, ips, fullhd, recertificado',
+      categoria: 'promocoes'
     },
     {
       codigo: 102,
@@ -34,7 +35,8 @@ export class Monitores {
       valorPromo: 849.90,
       quantidade: 6,
       destaque: 1,
-      keywords: 'monitor, samsung, curvo, 27 polegadas'
+      keywords: 'monitor, samsung, curvo, 27 polegadas',
+      categoria: 'promocoes'
     },
     {
       codigo: 103,
@@ -44,11 +46,12 @@ export class Monitores {
       valorPromo: 399.90,
       quantidade: 20,
       destaque: 0,
-      keywords: 'monitor, lg, 22 polegadas, escritório'
+      keywords: 'monitor, lg, 22 polegadas, escritório',
+      categoria: 'promocoes'
     }
   ];
 
-  // 🛒 Método que despacha o produto selecionado para o estado global da cesta
+  // Método que despacha o produto selecionado para o estado global da cesta
   adicionarProduto(produto: Produto) {
     this.cestaService.adicionarItem({ produto, quantidade: 1 });
   }

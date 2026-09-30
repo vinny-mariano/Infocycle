@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Produto } from '../../model/produto';
-import { CestaService } from '../../Services/Cesta/cesta.service';
+import { CestaService } from '../../services/cesta/cesta.service';
 
 @Component({
   selector: 'app-processadores',
@@ -24,7 +24,8 @@ export class Processadores {
       valorPromo: 389.90,
       quantidade: 14,
       destaque: 1,
-      keywords: 'processador, intel, i5, recertificado'
+      keywords: 'processador, intel, i5, recertificado',
+      categoria: ''
     },
     {
       codigo: 402,
@@ -34,7 +35,8 @@ export class Processadores {
       valorPromo: 549.90,
       quantidade: 9,
       destaque: 1,
-      keywords: 'processador, amd, ryzen, 3600'
+      keywords: 'processador, amd, ryzen, 3600',
+      categoria: ''
     }
   ];
 

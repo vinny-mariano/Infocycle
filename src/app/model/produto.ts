@@ -1,10 +1,12 @@
-export interface Produto {
-  codigo: number;
-  nome: string;
-  descritivo: string;
-  valor: number;
-  valorPromo?: number; // "?" Propriedade opcional
-  quantidade: number;
-  destaque: number;
-  keywords: string;
+export class Produto {
+  codigo: number = 0;
+  nome: string = '';
+  descritivo: string = '';
+  valor: number = 0;
+  valorPromo: number = 0;
+  quantidade: number = 0;
+  destaque: number = 0;
+  keywords: string = '';
+  categoria: string = '';
+  imagem?: string;
 }

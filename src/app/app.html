@@ -1,21 +1,33 @@
-<header class="bg-dark">
-    <h1 class="text-light">Infocycle</h1>
-    <nav>
-        <a routerLink="/vitrine">Promoções</a> | 
-        <a routerLink="/notebooks">Notebooks</a> |
-        <a routerLink="/monitores">Monitores</a> |
-        <a routerLink="/processadores">Processadores</a> |
-        <a routerLink="/perifericos">Periféricos</a> |
-        <a routerLink="/cesta">Meu carrinho</a> |
-        <a routerLink="/cadastro">Cadastro</a> |
-        <a routerLink="/login">Login</a>
-    </nav>
+<header class="bg-dark text-light p-3">
+    <div class="d-flex justify-content-between align-items-center w-100">
+        <h1 class="h3 m-0">
+            <a routerLink="/" class="text-light text-decoration-none">Infocycle</a>
+        </h1>
+        
+        <nav class="d-flex align-items-center flex-wrap">
+            <!-- Categorias (Esquerda) -->
+            <div>
+                <a routerLink="/vitrine" class="text-light text-decoration-none px-2">Promoções</a> | 
+                <a routerLink="/notebooks" class="text-light text-decoration-none px-2">Notebooks</a> |
+                <a routerLink="/monitores" class="text-light text-decoration-none px-2">Monitores</a> |
+                <a routerLink="/processadores" class="text-light text-decoration-none px-2">Processadores</a> |
+                <a routerLink="/perifericos" class="text-light text-decoration-none px-2">Periféricos</a>
+            </div>
+
+            <!-- Carrinho e Autenticação (Direita) -->
+            <div class="ms-4">
+                <a routerLink="/cesta" class="text-info text-decoration-none px-2">🛒 Meu carrinho</a> |
+                <a routerLink="/cadastro" class="text-light text-decoration-none px-2">Cadastro</a> |
+                <a routerLink="/login" class="text-light text-decoration-none px-2">Login</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 <router-outlet></router-outlet>
 
-<footer class="bg-secondary text-light text-end">
-    <a routerLink="/sobre">Sobre</a> |
-    <a routerLink="/contato">Contato</a>  
-    <p>© 2026 Infocycle. Todos os direitos reservados.</p>
+<footer class="bg-secondary text-light text-end p-3">
+    <a routerLink="/sobre" class="text-light text-decoration-none">Sobre</a> |
+    <a routerLink="/contato" class="text-light text-decoration-none">Contato</a>  
+    <p class="mb-0">© 2026 Infocycle. Todos os direitos reservados.</p>
 </footer>

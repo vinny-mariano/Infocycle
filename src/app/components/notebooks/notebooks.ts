@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Produto } from '../../model/produto';
-import { CestaService } from '../../Services/Cesta/cesta.service';
+import { CestaService } from '../../services/cesta/cesta.service';
 
 @Component({
   selector: 'app-notebooks',
@@ -22,7 +22,8 @@ export class Notebooks {
       valorPromo: 1699.90,
       quantidade: 8,
       destaque: 1,
-      keywords: 'notebook, lenovo, thinkpad, i5, recertificado'
+      keywords: 'notebook, lenovo, thinkpad, i5, recertificado',
+      categoria: 'promocoes'
     },
     {
       codigo: 202,
@@ -32,7 +33,8 @@ export class Notebooks {
       valorPromo: 2199.90,
       quantidade: 5,
       destaque: 1,
-      keywords: 'notebook, dell, latitude, i7, recertificado'
+      keywords: 'notebook, dell, latitude, i7, recertificado',
+      categoria: 'promocoes'
     }
   ];
 

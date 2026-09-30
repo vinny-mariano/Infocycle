@@ -1,23 +1,31 @@
 <div class="container my-4">
-  <!-- 🧭 Topo com Logotipo e Botões de Login/Cadastro alinhados à direita -->
+  <!--  Topo com Logotipo e Botões de Login/Cadastro alinhados à direita -->
   <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
     <h1 class="h3 text-success fw-bold m-0">♻️ Infocycle</h1>
-    <div class="d-flex gap-2">
-      <a routerLink="/login" class="btn btn-outline-primary btn-sm">Login</a>
-      <a routerLink="/cadastro" class="btn btn-primary btn-sm">Cadastre-se</a>
-    </div>
+   <form class="d-flex mx-auto" style="width: 350px;" role="search">
+  <div class="input-group input-group-sm">
+    <input 
+      class="form-control" 
+      type="search" 
+      placeholder="Pesquisar produtos..." 
+      aria-label="Pesquisar">
+    <button class="btn btn-outline-success" type="button">
+      Pesquisar
+    </button>
+  </div>
+</form>
   </header>
 
-  <!-- ⚡ Hero Banner de Apresentação -->
+  <!--  Hero Banner de Apresentação -->
   <section class="p-5 mb-5 bg-light rounded-3 shadow-sm text-center">
     <h2 class="display-6 fw-bold text-dark">Tecnologia Recertificada com Garantia</h2>
     <p class="text-muted fs-5">Alta performance e sustentabilidade para o seu setup e para o planeta.</p>
-    <a routerLink="/vitrine" class="btn btn-success btn-lg mt-2">Acessar Vitrine</a>
+    <a routerLink="/vitrine" class="btn btn-success btn-lg mt-2">Promoções</a>
   </section>
 
-  <!-- 🏷️ Seção de Principais Promoções e Ofertas -->
+  <!--  Seção de Principais Promoções e Ofertas -->
   <section class="mb-5">
-    <h3 class="mb-4 text-primary">🔥 Principais Ofertas</h3>
+    <h3 class="mb-4 text-primary">Principais Ofertas</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4">
       @for (promo of promocoes; track promo.titulo) {
         <div class="col">

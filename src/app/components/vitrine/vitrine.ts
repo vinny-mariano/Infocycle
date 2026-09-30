@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Produto } from '../../model/produto';
-import { CestaService } from '../../Services/Cesta/cesta.service';
+import { CestaService } from '../../services/cesta/cesta.service';
 
 @Component({
   selector: 'app-vitrine',
@@ -24,7 +24,8 @@ export class Vitrine {
       valorPromo: 499.90,
       quantidade: 15,
       destaque: 1,
-      keywords: 'monitor, dell, ips, recertificado, escritório'
+      keywords: 'monitor, dell, ips, recertificado, escritório',
+      categoria: ''
     },
     {
       codigo: 2,
@@ -34,7 +35,8 @@ export class Vitrine {
       valorPromo: 1699.90,
       quantidade: 8,
       destaque: 1,
-      keywords: 'notebook, thinkpad, lenovo, i5, recertificado'
+      keywords: 'notebook, thinkpad, lenovo, i5, recertificado',
+      categoria: ''
     }
   ];
 

@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.css'
 })

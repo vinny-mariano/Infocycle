@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Produto } from '../../model/produto';
-import { CestaService } from '../../Services/Cesta/cesta.service';
+import { CestaService } from '../../services/cesta/cesta.service';
 
 @Component({
   selector: 'app-perifericos',
@@ -11,10 +11,10 @@ import { CestaService } from '../../Services/Cesta/cesta.service';
   styleUrl: './perifericos.css',
 })
 export class Perifericos {
-  // 💉 Injeção do serviço global de estado
+  // Injeção do serviço global de estado
   private cestaService = inject(CestaService);
 
-  // 📦 Catálogo de periféricos recertificados alinhados ao Infocycle
+  // Catálogo de periféricos recertificados alinhados ao Infocycle
   listaPerifericos: Produto[] = [
     {
       codigo: 301,
@@ -24,7 +24,8 @@ export class Perifericos {
       valorPromo: 149.90,
       quantidade: 15,
       destaque: 1,
-      keywords: 'teclado, mouse, sem fio, perifericos, recertificado'
+      keywords: 'teclado, mouse, sem fio, perifericos, recertificado',
+      categoria: 'promocoes'
     },
     {
       codigo: 302,
@@ -34,11 +35,12 @@ export class Perifericos {
       valorPromo: 189.90,
       quantidade: 10,
       destaque: 1,
-      keywords: 'headset, fone, microfone, perifericos'
+      keywords: 'headset, fone, microfone, perifericos',
+      categoria: 'promocoes'
     }
   ];
 
-  // 🛒 Método para despachar o periférico selecionado para a cesta
+  // Método para despachar o periférico selecionado para a cesta
   adicionarProduto(produto: Produto) {
     this.cestaService.adicionarItem({ produto, quantidade: 1 });
   }

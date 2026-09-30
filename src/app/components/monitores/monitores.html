@@ -1,6 +1,6 @@
 <div class="container my-5">
-  <h2 class="mb-4 text-primary">🖥️ Monitores Recertificados</h2>
-  <p class="text-muted">Monitores testados, higienizados e com garantia para o seu setup corporativo ou pessoal.</p>
+  <h2 class="mb-2 text-dark fw-bold">Monitores Recertificados</h2>
+  <p class="text-muted mb-4">Hardware testado, higienizado e com garantia para alta performance sustentável.</p>
 
   <div class="row row-cols-1 row-cols-md-3 g-4">
     @for (monitor of listaMonitores; track monitor.codigo) {
@@ -10,19 +10,24 @@
             @if (monitor.valorPromo) {
               <span class="badge bg-danger align-self-start mb-2">Oferta Sustentável</span>
             }
+            
+            <!-- Placeholder Visual para a Imagem -->
+            <div class="bg-light border border-2 border-dashed rounded mb-3 d-flex align-items-center justify-content-center text-muted" style="height: 160px;">
+              <span class="small">🖼️️ [ Imagem do Monitor ]</span>
+            </div>
+
             <h5 class="card-title">{{ monitor.nome }}</h5>
             <p class="card-text text-muted small flex-grow-1">{{ monitor.descritivo }}</p>
             
             <div class="mb-3">
               @if (monitor.valorPromo) {
-                <span class="text-muted text-decoration-through small d-block">{{ monitor.valor | currency:'BRL' }}</span>
+                <span class="text-muted text-decoration-line-through small d-block">{{ monitor.valor | currency:'BRL' }}</span>
                 <span class="text-success fw-bold fs-4">{{ monitor.valorPromo | currency:'BRL' }}</span>
               } @else {
                 <span class="text-success fw-bold fs-4">{{ monitor.valor | currency:'BRL' }}</span>
               }
             </div>
 
-            <!-- Botão conectado ao método de adição -->
             <button class="btn btn-success mt-auto w-100" (click)="adicionarProduto(monitor)">
               🛒 Adicionar à Cesta
             </button>
