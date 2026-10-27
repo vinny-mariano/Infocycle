@@ -1,0 +1,9 @@
+<div class="input-group">
+  <input 
+    type="text" 
+    class="form-control" 
+    placeholder="O que você procura?" 
+    name="termoBusca"
+    [ngModel]="termoBusca()" 
+    (ngModelChange)="salvarBusca($event)">
+</div>
